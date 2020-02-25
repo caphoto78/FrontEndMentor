@@ -33,6 +33,7 @@ body {
 .wrapper {
   max-width: 1110px;
   margin: 50px auto;
+  min-width: 935px;
 }
 
 a {
