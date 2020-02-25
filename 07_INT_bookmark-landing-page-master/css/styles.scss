@@ -1,0 +1,425 @@
+@import 'colorsVarFont';
+@import 'reset';
+@import 'global';
+
+
+/* HERO */
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    padding-right: 20px;
+}
+
+.hero_image {
+    order: 2;
+    width: 50%;
+    margin-top: 20px;
+    position: relative;
+
+    &::after {
+        content: "";
+        background-color: $softBlue;
+        width: 1500px;
+        height: 352px;
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+        display: inline-block;
+        position: absolute;
+        top: 140px;
+        right: -1140px;
+        z-index: -1;
+    }
+}
+
+
+
+
+/* FEATURES */
+
+
+.features_wrapper {
+    text-align: center;
+}
+
+.tab_ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    margin: 70px 0px 30px 0px;
+}
+
+.tab_link {
+    padding: 0 50px;
+    color: fade-out($very-dark-blue, 0.25);
+    transition: color 0.3s;
+    letter-spacing: .07em;
+}
+
+.tab_link:hover {
+    color: $softRed;
+}
+
+.hr_container {
+    position: relative;
+}
+
+hr {
+    border-top: 1px solid fade-out($very-dark-blue, 0.8);
+    width: 730px;
+    margin: auto;
+}
+
+.hhr {
+    display: inline-block;
+    position: absolute;
+    width: 24%;
+    height: 5px;
+    background-color: $softRed;
+    top: 0;
+    left: -470px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: left 0.3s ease-in-out;
+}
+
+.tab_content {
+    margin-top: 72px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.content_wrapper {
+    flex: 1 1;
+}
+
+.content_content {
+    width: 80%;
+    margin-left: auto;
+
+}
+
+.img_tab {
+    flex: 1 1;
+    height: 400px;
+    text-align: end;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        background-color: $softBlue;
+        width: 1500px;
+        height: 352px;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        position: absolute;
+        left: -1010px;
+        top: 440px;
+        z-index: -1;
+    }
+}
+
+.img_feature {
+    text-align: right;
+}
+
+
+.tab_active {
+    display: flex;
+}
+
+.feature_active {
+    color: $very-dark-blue;
+}
+
+.tab_li {
+    position: relative;
+}
+
+
+.features {
+    margin-bottom: 195px;
+    position: relative;
+}
+
+/* DOWNLOAD THE EXTENSIONS */
+
+.card_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 450px;
+    margin-top: 50px;
+    margin-bottom: 160px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0px 10px 20px -5px rgba(74, 94, 207, 0.205);
+        border-radius: 15px;
+        margin: 0px 18px;
+
+        .button {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .browser_logo {
+            margin-top: 50px;
+        }
+    }
+}
+
+.chrome {
+    align-self: flex-start;
+}
+
+.firefox {
+    align-self: center;
+}
+
+.opera {
+    align-self: flex-end;
+}
+
+/// FAQ - Accordion ///
+
+.faq {
+    font-size: 16px;
+    color: fade-out($very-dark-blue, 0.25);
+    letter-spacing: 0.02em;
+}
+
+.faqs_wrapper {
+    max-width: 50%;
+    margin: auto;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-in-out;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 20px 20px 0;
+    border-top: 1px solid fade-out($very-dark-blue, .85);
+
+    &:hover {
+        color: $softRed;
+    }
+}
+
+.faq-question.is-open {
+    .faq_arrow {
+        transform: rotate(180deg);
+        transition: transform 0.2s ease-in-out;
+
+        path {
+            stroke: $softRed;
+        }
+    }
+}
+
+.faq-question.is-closed {
+    .faq_arrow {
+        transform: rotate(0deg);
+        transition: transform 0.2s ease-in-out;
+
+        path {
+            stroke: $softBlue;
+            transition: stroke 0.3s ease-in-out;
+        }
+    }
+}
+
+.wrapper_center {
+    margin-bottom: 85px;
+}
+
+.last-panel {
+    border-bottom: 1px solid fade-out($very-dark-blue, .85);
+    margin-bottom: 53px;
+}
+
+.faq_btn {
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+/// FOOTER ///
+
+#contactBtn {
+    padding: .9em 2em;
+}
+
+footer {
+    background-color: $softBlue;
+    position: relative;
+
+}
+
+form {
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer_txt {
+    width: 35%;
+    margin: auto;
+}
+
+form p {
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: white;
+}
+
+form h2 {
+    color: white;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 35px;
+    line-height: 40px;
+}
+
+form input[type='email'] {
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: white;
+    outline: none;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    width: 300px;
+    margin-right: 10px;
+
+    &::placeholder {
+        color: fade-out($very-dark-blue, .85);
+    }
+}
+
+form span {
+    position: relative;
+    z-index: 0;
+}
+
+// error red background and ! icon
+form span.error {
+    &::after {
+        content: "!";
+        display: inline-block;
+        background-color: $softRed;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: white;
+        font-size: 15px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 270px;
+        z-index: 2;
+    }
+
+    &::before {
+        content: "";
+        color: white;
+        background-color: $softRed;
+        width: 300px;
+        height: 65px;
+        display: inline-block;
+        z-index: 1;
+        border-radius: 5px;
+        position: absolute;
+        top: -10;
+        z-index: -1;
+    }
+}
+
+/// error text
+.footer_input span span {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 10px;
+    font-size: 10px;
+    color: white;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.footer-links ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-links ul li {
+    list-style: none;
+    padding-left: 50px;
+}
+
+.footer-links ul li a {
+    color: white;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: color .2s ease-in;
+
+    &:hover {
+        color: $softRed;
+    }
+}
+
+.footer_wrapper_links {
+    background-color: $very-dark-blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 30px 165px;
+    margin-top: 30px;
+}
+
+.logos {
+    width: auto;
+    display: flex;
+    justify-content: flex-between;
+}
+
+.logos a {
+    padding: 0 0 0 40px;
+}

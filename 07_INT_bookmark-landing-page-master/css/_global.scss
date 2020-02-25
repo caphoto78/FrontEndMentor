@@ -1,0 +1,157 @@
+.wrapper {
+    max-width: 1110px;
+    margin: 50px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 48px;
+    color: $very-dark-blue;
+    line-height: 52px;
+    letter-spacing: -0.01em;
+}
+
+p {
+    font-size: 18px;
+    color: fade-out($very-dark-blue, 0.5);
+    line-height: 28px;
+    margin: 25px 0px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 32px;
+    color: $very-dark-blue;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 20px;
+    color: $very-dark-blue;
+    letter-spacing: 0.03em;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 15px;
+    color: fade-out($very-dark-blue, 0.5);
+
+    margin-bottom: 30px;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 18px;
+    color: $very-dark-blue, 0.5;
+    transition: color 0.3s;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.header_item {
+    padding: 0 20px;
+    color: $very-dark-blue;
+}
+
+.button {
+    cursor: pointer;
+    padding: 1em 2em;
+    border-radius: 5px;
+    background-color: $whitesmoke;
+    box-shadow: 0px 8px 8px -4px rgba(74, 94, 207, 0.205);
+    transition: all 0.3s ease-in;
+    outline: none;
+    letter-spacing: 0.03em;
+    font-size: .85em;
+    font-weight: 500;
+}
+
+.link {
+    letter-spacing: 0.15em;
+    font-size: .8em;
+    color: $very-dark-blue;
+    transition: color .3s;
+}
+
+.link:hover {
+    color: $softRed;
+
+}
+
+.button_red {
+    padding: .8em 2.3em;
+    background-color: $softRed;
+    border: 2px solid $softRed;
+    color: white;
+    font-weight: 400;
+}
+
+.btn {
+    letter-spacing: 0.15em;
+    font-size: .8em;
+}
+
+
+.button_red:hover {
+    background-color: white;
+    color: $softRed;
+}
+
+.button_blue {
+    background-color: $softBlue;
+    border: 2px solid $softBlue;
+    color: white;
+}
+
+.button_blue:hover {
+    background-color: white;
+    color: $softBlue;
+}
+
+.button_white {
+    background-color: $whitesmoke;
+    border: 2px solid $whitesmoke;
+    color: $very-dark-blue;
+    margin-left: 10px;
+}
+
+.button_white:hover {
+    background-color: $whitesmoke;
+    border: 2px solid $very-dark-blue;
+}
+
+%content_wrapper {
+    max-width: 50%;
+    margin: auto;
+}
+
+.wrapper_center {
+    @extend %content_wrapper;
+    text-align: center;
+}
+
+section {
+    margin-top: 100px;
+}
